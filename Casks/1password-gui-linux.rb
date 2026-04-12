@@ -17,6 +17,8 @@ cask "1password-gui-linux" do
   desc "Password manager that keeps all passwords secure behind one password"
   homepage "https://1password.com/"
 
+  depends_on formula: "zenity"
+
   livecheck do
     url "https://releases.1password.com/linux/stable/index.xml"
     regex(/v?(\d+(?:\.\d+)+)/i)
